@@ -70,6 +70,6 @@
   },
   "exclude": [
     "node_modules",
-    "tests"
+    "__tests__"
   ]
 }
