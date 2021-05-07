@@ -1,0 +1,42 @@
+{
+  "name": "lgtm-image-action",
+  "version": "1.0.0",
+  "description": "GitHub Action to post LGTM image when reviewer approve pull request",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "ncc build src/index.ts -o lib",
+    "format": "prettier --write src/**/*.ts",
+    "format:check": "prettier --check --loglevel warn src/**/*.ts",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazy-actions/lgtm-image-action.git"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "lgtm"
+  ],
+  "author": "lazy-actions",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lazy-actions/lgtm-image-action/issues"
+  },
+  "homepage": "https://github.com/lazy-actions/lgtm-image-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/github": "^4.0.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.0.2",
+    "@types/node-fetch": "^2.5.10",
+    "@vercel/ncc": "^0.28.5",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.6",
+    "typescript": "^4.2.4"
+  }
+}
