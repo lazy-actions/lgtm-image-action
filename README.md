@@ -44,6 +44,7 @@ jobs:
 ```yaml
 jobs:
   build:
+    if: ${{ github.event.review.state == 'approved' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
