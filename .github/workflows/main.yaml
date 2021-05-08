@@ -1,0 +1,26 @@
+name: Run Self Action
+
+on:
+  pull_request_review:
+    type: [submitted]
+
+jobs:
+  build:
+    if: github.event.review.state == 'approved'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Setup workspace
+        run: yarn install --frozen-lockfile
+
+      - name: Transpile
+        run: yarn run build
+
+      - uses: ./
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
