@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: lazy-actions/lgtm-image-action@master
+      - uses: lazy-actions/lgtm-image-action@main
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 ```
@@ -49,7 +49,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: lazy-actions/lgtm-image-action@master
+      - uses: lazy-actions/lgtm-image-action@main
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           favorite-image: 'https://your.favorite/image1.png,https://your.favorite/image2.png'
