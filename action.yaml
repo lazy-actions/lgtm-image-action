@@ -3,7 +3,7 @@ author: lazy-actions
 description: 'Post LGTM image when reviewer approves pull request'
 inputs:
   repo-token:
-    description: '${{ secrets.GITHUB_TOKEN }}'
+    description: 'Specify GITHUB_TOKEN to access GitHub API'
     required: true
   favorite-image:
     description: 'Your favorite image urls'
