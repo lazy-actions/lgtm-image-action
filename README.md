@@ -7,6 +7,8 @@
 Post LGTM image when reviewer approves pull request.<br>
 The image is randomly selected from [LGTMoon](https://lgtmoon.herokuapp.com/).
 
+![sample](./img/lgtm.png)
+
 ## Inputs
 
 ### jobs.<job_id>.steps.with
